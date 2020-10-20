@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+    
+    <property name="now" value="GETDATE()" dbms="mssql"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity Parametria.
+    -->
+    <changeSet id="20191016120000-1" author="mmunoz">
+        <addColumn tableName="parametria">
+            <column name="codigo_tabla" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="codigo_item" type="bigint">
+                <constraints nullable="false" />
+            </column>
+        </addColumn>
+    </changeSet>
+
+    <!--
+        Dropped foreign keys pricing
+        Dropped column id
+        Add PK composite
+    -->
+    <changeSet id="20191016120000-2" author="mmunoz">
+        <dropForeignKeyConstraint baseTableName="pricing" constraintName="fk_pricing_tipo_transaccion_id"/>
+        <dropForeignKeyConstraint baseTableName="pricing" constraintName="fk_pricing_canal_operacion_id"/>
+        <dropForeignKeyConstraint baseTableName="pricing" constraintName="fk_pricing_tipo_cliente_originante_id"/>
+        <dropForeignKeyConstraint baseTableName="pricing" constraintName="fk_pricing_tipo_cliente_destinatario_id"/>
+        <dropForeignKeyConstraint baseTableName="pricing" constraintName="fk_pricing_moneda_id"/>
+        <dropForeignKeyConstraint baseTableName="pricing" constraintName="fk_pricing_forma_pago_id"/>
+        <dropPrimaryKey tableName="parametria" constraintName="pk_parametria"/>
+
+        <dropColumn tableName="parametria" columnName="id" />
+
+        <addPrimaryKey tableName="parametria" columnNames="codigo_tabla, codigo_item" constraintName="pk_parametria"/>
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+</databaseChangeLog>

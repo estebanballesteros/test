@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="20191017160000-1" author="mmunoz">
+        <!-- drop FK pricing_history_id from pricing-->
+        <dropUniqueConstraint tableName="pricing" constraintName="ux_pricing_pricing_history_id" />
+        <dropForeignKeyConstraint baseTableName="pricing" constraintName="fk_pricing_pricing_history_id" />
+
+        <!-- drop column pricing_history_id from pricing-->
+        <dropColumn tableName="pricing" columnName="pricing_history_id" />
+
+        <!-- add column pricing_id on pricing_history-->
+        <addColumn tableName="pricing_history">
+            <column name="pricing_id" type="bigint">
+                <constraints nullable="false" unique="false"/>
+            </column>
+        </addColumn>
+
+        <!-- add fk pricing_id on pricing_history-->
+        <addForeignKeyConstraint
+            baseTableName="pricing_history"
+            baseColumnNames="pricing_id"
+            constraintName="fk_pricing_history_pricing"
+            referencedTableName="pricing"
+            referencedColumnNames="id" />
+
+    </changeSet>
+</databaseChangeLog>

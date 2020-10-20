@@ -1,0 +1,7 @@
+id,aprobado,condicion_menor_igual,condicion_mayor_igual,condicion_monto_desde,condicion_monto_hasta,maker_and_checker_id,costo_id,tipo_transaccion_codigo_tabla,tipo_transaccion_codigo_item,canal_operacion_codigo_tabla,canal_operacion_codigo_item,tipo_cliente_originante_codigo_tabla,tipo_cliente_originante_codigo_item,tipo_cliente_destinatario_codigo_tabla,tipo_cliente_destinatario_codigo_item,moneda_codigo_tabla,moneda_codigo_item,forma_pago_codigo_tabla,forma_pago_codigo_item
+1,1,NULL,NULL,NULL,NULL,NULL,1,1,5,19,0,13,0,13,0,15,32,NULL,NULL
+2,1,NULL,NULL,NULL,NULL,NULL,2,1,5,19,0,13,0,13,1,15,32,NULL,NULL
+3,1,NULL,NULL,NULL,NULL,NULL,3,1,5,19,1,13,0,13,0,15,32,NULL,NULL
+4,1,NULL,NULL,NULL,NULL,NULL,4,1,5,19,1,13,0,13,1,15,32,NULL,NULL
+5,1,NULL,NULL,NULL,NULL,NULL,5,1,5,19,1,13,1,13,0,15,32,NULL,NULL
+6,1,NULL,NULL,NULL,NULL,NULL,6,1,5,19,1,13,1,13,1,15,32,NULL,NULL

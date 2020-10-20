@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="GETDATE()" dbms="mssql"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity Pricing.
+    -->
+    <changeSet id="20191016150000-1" author="mmunoz">
+        <dropColumn tableName="pricing" columnName="tipo_transaccion_id" />
+        <dropColumn tableName="pricing" columnName="canal_operacion_id" />
+        <dropColumn tableName="pricing" columnName="tipo_cliente_originante_id" />
+        <dropColumn tableName="pricing" columnName="tipo_cliente_destinatario_id" />
+        <dropColumn tableName="pricing" columnName="moneda_id" />
+        <dropColumn tableName="pricing" columnName="forma_pago_id" />
+    </changeSet>
+
+    <changeSet id="20191016150000-2" author="mmunoz">
+        <addColumn tableName="pricing">
+            <column name="tipo_transaccion_codigo_tabla" type="bigint"></column>
+            <column name="tipo_transaccion_codigo_item" type="bigint"></column>
+            <column name="canal_operacion_codigo_tabla" type="bigint"></column>
+            <column name="canal_operacion_codigo_item" type="bigint"></column>
+            <column name="tipo_cliente_originante_codigo_tabla" type="bigint"></column>
+            <column name="tipo_cliente_originante_codigo_item" type="bigint"></column>
+            <column name="tipo_cliente_destinatario_codigo_tabla" type="bigint"></column>
+            <column name="tipo_cliente_destinatario_codigo_item" type="bigint"></column>
+            <column name="moneda_codigo_tabla" type="bigint"></column>
+            <column name="moneda_codigo_item" type="bigint"></column>
+            <column name="forma_pago_codigo_tabla" type="bigint"></column>
+            <column name="forma_pago_codigo_item" type="bigint"></column>
+        </addColumn>
+
+        <addForeignKeyConstraint baseTableName="pricing"
+                                 baseColumnNames="tipo_transaccion_codigo_tabla, tipo_transaccion_codigo_item"
+                                 constraintName="fk_pricing_tipo_transaccion_id"
+                                 referencedTableName="parametria"
+                                 referencedColumnNames="codigo_tabla, codigo_item"/>
+
+        <addForeignKeyConstraint baseTableName="pricing"
+                                 baseColumnNames="canal_operacion_codigo_tabla, canal_operacion_codigo_item"
+                                 constraintName="fk_pricing_canal_operacion_id"
+                                 referencedTableName="parametria"
+                                 referencedColumnNames="codigo_tabla, codigo_item"/>
+
+        <addForeignKeyConstraint baseTableName="pricing"
+                                 baseColumnNames="tipo_cliente_originante_codigo_tabla, tipo_cliente_originante_codigo_item"
+                                 constraintName="fk_pricing_tipo_cliente_originante_id"
+                                 referencedTableName="parametria"
+                                 referencedColumnNames="codigo_tabla, codigo_item"/>
+
+        <addForeignKeyConstraint baseTableName="pricing"
+                                 baseColumnNames="tipo_cliente_destinatario_codigo_tabla, tipo_cliente_destinatario_codigo_item"
+                                 constraintName="fk_pricing_tipo_cliente_destinatario_id"
+                                 referencedTableName="parametria"
+                                 referencedColumnNames="codigo_tabla, codigo_item"/>
+
+        <addForeignKeyConstraint baseTableName="pricing"
+                                 baseColumnNames="moneda_codigo_tabla, moneda_codigo_item"
+                                 constraintName="fk_pricing_moneda_id"
+                                 referencedTableName="parametria"
+                                 referencedColumnNames="codigo_tabla, codigo_item"/>
+
+        <addForeignKeyConstraint baseTableName="pricing"
+                                 baseColumnNames="forma_pago_codigo_tabla, forma_pago_codigo_item"
+                                 constraintName="fk_pricing_forma_pago_id"
+                                 referencedTableName="parametria"
+                                 referencedColumnNames="codigo_tabla, codigo_item"/>
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+</databaseChangeLog>

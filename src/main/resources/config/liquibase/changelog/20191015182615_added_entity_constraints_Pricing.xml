@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Pricing.
+    -->
+    <changeSet id="20191015182615-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="pricing_history_id"
+                                 baseTableName="pricing"
+                                 constraintName="fk_pricing_pricing_history_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="pricing_history"/>
+
+        <addForeignKeyConstraint baseColumnNames="maker_and_checker_id"
+                                 baseTableName="pricing"
+                                 constraintName="fk_pricing_maker_and_checker_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="maker_and_checker"/>
+
+        <addForeignKeyConstraint baseColumnNames="costo_id"
+                                 baseTableName="pricing"
+                                 constraintName="fk_pricing_costo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="costo"/>
+
+        <addForeignKeyConstraint baseColumnNames="tipo_transaccion_id"
+                                 baseTableName="pricing"
+                                 constraintName="fk_pricing_tipo_transaccion_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="parametria"/>
+
+        <addForeignKeyConstraint baseColumnNames="canal_operacion_id"
+                                 baseTableName="pricing"
+                                 constraintName="fk_pricing_canal_operacion_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="parametria"/>
+
+        <addForeignKeyConstraint baseColumnNames="tipo_cliente_originante_id"
+                                 baseTableName="pricing"
+                                 constraintName="fk_pricing_tipo_cliente_originante_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="parametria"/>
+
+        <addForeignKeyConstraint baseColumnNames="tipo_cliente_destinatario_id"
+                                 baseTableName="pricing"
+                                 constraintName="fk_pricing_tipo_cliente_destinatario_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="parametria"/>
+
+        <addForeignKeyConstraint baseColumnNames="moneda_id"
+                                 baseTableName="pricing"
+                                 constraintName="fk_pricing_moneda_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="parametria"/>
+
+        <addForeignKeyConstraint baseColumnNames="forma_pago_id"
+                                 baseTableName="pricing"
+                                 constraintName="fk_pricing_forma_pago_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="parametria"/>
+
+    </changeSet>
+</databaseChangeLog>

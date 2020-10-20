@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="20191017163000-1" author="mmunoz">
+        <!-- drop UX pricing_history-->
+        <dropUniqueConstraint tableName="pricing_history" constraintName="ux_pricing_history_costo_id" />
+        <dropUniqueConstraint tableName="pricing_history" constraintName="ux_pricing_history_maker_and_checker_id" />
+
+        <!-- drop UX pricing-->
+        <dropUniqueConstraint tableName="pricing" constraintName="ux_pricing_costo_id" />
+        <dropUniqueConstraint tableName="pricing" constraintName="ux_pricing_maker_and_checker_id" />
+
+    </changeSet>
+</databaseChangeLog>

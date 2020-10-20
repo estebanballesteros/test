@@ -1,0 +1,107 @@
+codigo_tabla,codigo_item,descripcion_larga,descripcion_corta,grupo_1,grupo_2
+0,0,Débito,DEB,NULL,NULL
+0,1,Crédito,CRD,NULL,NULL
+1,0,Depósito,DEP,NULL,NULL
+1,1,Extracción,EXT,NULL,NULL
+1,2,Reverso,REV,NULL,NULL
+1,3,Ajuste crédito,AJC,NULL,NULL
+1,4,Ajuste débito,AJD,NULL,NULL
+1,5,Transferencia,TRA,NULL,NULL
+1,6,Prestamos,PRE,NULL,NULL
+1,7,Criptomonedas compra,CRC,NULL,NULL
+1,8,Criptomonedas venta,CRV,NULL,NULL
+1,10,Criptomonedas transferencia,CRT,NULL,NULL
+1,11,Criptomonedas consulta,CRP,NULL,NULL
+1,12,Pagos,PAG,NULL,NULL
+2,0,Pendiente,PEN,NULL,NULL
+2,1,Finalizada,FIN,NULL,NULL
+2,2,Cancelada,CAN,NULL,NULL
+2,3,Rechazada,REC,NULL,NULL
+3,0,Masculino,M,NULL,NULL
+3,1,Femenino,F,NULL,NULL
+3,2,No define,ND,NULL,NULL
+4,0,Inactivo,I,NULL,NULL
+4,1,Activo,A,NULL,NULL
+4,2,Bloqueado,B,NULL,NULL
+4,3,Eliminado,F,NULL,NULL
+5,0,Física,F,NULL,NULL
+5,1,Jurídica,J,NULL,NULL
+6,0,Activa,A,NULL,NULL
+6,1,Inactiva,I,NULL,NULL
+6,2,Cerrada,C,NULL,NULL
+6,3,Eliminada,E,NULL,NULL
+7,0,Sin límite,SL,NULL,NULL
+7,1,Importe fijo diaro,IFD,NULL,NULL
+7,2,Importe fijo semanal,IFS,NULL,NULL
+7,3,Importe fijo mensual,IFM,NULL,NULL
+8,0,Temporal,T,NULL,NULL
+8,1,Cuenta Tarjeta MASTER,MA,NULL,NULL
+8,2,Cuenta Tarjeta VISA,VI,NULL,NULL
+8,3,Cuenta Moneyfi Pesos Argentinos,CM_ARS,NULL,NULL
+8,4,Cuenta Moneyfi Dólares,CM_USD,NULL,NULL
+8,5,Cuenta Prestamos,C_PREST,NULL,NULL
+9,0,Titular,TIT,NULL,NULL
+9,1,Apoderado,APO,NULL,NULL
+9,2,Adicional,ADH,NULL,NULL
+10,0,Móvil,M,NULL,NULL
+10,1,Fijo,F,NULL,NULL
+11,0,Claro,CLA,NULL,NULL
+11,1,Movistar,MOV,NULL,NULL
+11,2,Nextel,NEX,NULL,NULL
+11,3,Personal,PER,NULL,NULL
+12,0,Actual,ACT,NULL,NULL
+12,1,Laboral,LAB,NULL,NULL
+12,3,Sin definir,SD,NULL,NULL
+13,0,Registrado,R,NULL,NULL
+13,1,Prospect,P,NULL,NULL
+14,0,Pendiente,PEN,NULL,NULL
+14,1,Finalizado,FIN,NULL,NULL
+15,32,Peso argentino,ARS,NULL,NULL
+15,840,Dólar estadounidense,USD,NULL,NULL
+16,0,Efectivo,EFECT,NULL,NULL
+16,1,Debito,DEB,NULL,NULL
+16,2,Credito,CRED,NULL,NULL
+17,0,VISA,VI,NULL,NULL
+17,1,MASTERCARD,MA,NULL,NULL
+18,0,Alquileres,ALQ,NULL,NULL
+18,1,Cuotas,COU,NULL,NULL
+18,2,Expensas,EXP,NULL,NULL
+18,3,Factura,FAC,NULL,NULL
+18,4,Préstamo,PRE,NULL,NULL
+18,5,Seguro,SEG,NULL,NULL
+18,6,Honorarios,HON,NULL,NULL
+18,7,Varios,VAR,NULL,NULL
+18,8,Haberes,HAB,NULL,NULL
+19,0,Aplicacion Mobile,APP,NULL,NULL
+19,1,Cajero ATM,ATM,NULL,NULL
+19,2,BackOffice,BO,NULL,NULL
+20,1,Emitida,E,NULL,NULL
+20,2,Activada,A,NULL,NULL
+20,3,Bloqueada,B,NULL,NULL
+20,4,Reimpresa,R,NULL,NULL
+21,0,Clave Virtual Uno,1,NULL,NULL
+22,0,Pendiente de aprobacion,LPEN,NULL,NULL
+22,1,Pendiente de Revision,LPENREV,NULL,NULL
+22,2,Aprobado por Operador Octagon,LAPOOCT,NULL,NULL
+22,3,Liquidado,LLIQ,NULL,NULL
+22,4,Rechazado total,LREC,NULL,NULL
+22,5,Rechazado por Operador Octagon,LRPOOCT,NULL,NULL
+22,6,Aprobado por Supervisor Octagon,LAPSOCT,NULL,NULL
+22,7,Rechazado por Supervisor Octagon,LRPSOCT,NULL,NULL
+23,0,Pendiente de aprobacion,PPEN,NULL,NULL
+23,1,Aprobado por Supervisor Financiera,PAPSF,NULL,NULL
+23,2,Rechazado por Supervidor Financiera,PRPSF,NULL,NULL
+23,3,Reprocesado,PREP,NULL,NULL
+23,4,Cancelado,PCAN,NULL,NULL
+23,5,Rechazado por Operador Octagon,PRPOOCT,NULL,NULL
+23,6,Liquidado,PLIQ,NULL,NULL
+23,7,Aprobado por Operador Octagon,PAPOOCT,NULL,NULL
+23,8,Aprobado por Supervisor Operador,PAPSOCT,NULL,NULL
+23,9,Rechazado por Supervisor Operador,PRPSOCT,NULL,NULL
+24,1,Remanente,REM,NULL,NULL
+24,2,Prestamo,PRE,NULL,NULL
+24,3,Transferencia,TRA,NULL,NULL
+24,4,Acceso ATM,APP,NULL,NULL
+24,5,Registracion,REG,NULL,NULL
+25,0,Uno a Uno,UAU,NULL,NULL
+25,1,Carga Masiva,CM,NULL,NULL

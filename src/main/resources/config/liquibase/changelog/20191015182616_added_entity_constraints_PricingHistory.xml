@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity PricingHistory.
+    -->
+    <changeSet id="20191015182616-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="maker_and_checker_id"
+                                 baseTableName="pricing_history"
+                                 constraintName="fk_pricing_history_maker_and_checker_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="maker_and_checker"/>
+
+        <addForeignKeyConstraint baseColumnNames="costo_id"
+                                 baseTableName="pricing_history"
+                                 constraintName="fk_pricing_history_costo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="costo"/>
+
+    </changeSet>
+</databaseChangeLog>

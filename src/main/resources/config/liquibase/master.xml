@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191015182613_added_entity_Parametria.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191015182614_added_entity_MakerAndChecker.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191015182615_added_entity_Pricing.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191015182616_added_entity_PricingHistory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191015182617_added_entity_Costo.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20191015182615_added_entity_constraints_Pricing.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191015182616_added_entity_constraints_PricingHistory.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+    <include file="config/liquibase/changelog/20191016120000_added_column_Parametria.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191016150000_dropped_fk_Pricing.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191017110000_added_parametro_data.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191017160000_alter_Entity_PricingHistory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191017163000_drop_ux_Costo_MakerAndChecker.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191021120000_added_data_costo_transferencia.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191021090000_added_data_pricing_transferencia.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191022130000_added_data_pricinghistory_transferencia.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191025120000_added_data_costo_prestamos.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191025120000_added_data_pricing_prestamos.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191029110000_added_data_costo_history_prestamos.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191029120000_added_data_costo_extracciones.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191029120000_added_data_pricing_extracciones.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191029120000_added_data_pricing_history_extracciones.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191029160000_added_entity_DollarExchange.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191029170000_alter_entity_DollarExchange.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191031100000_alter_entity_DollarExchange.xml" relativeToChangelogFile="false"/>
+</databaseChangeLog>
